@@ -154,11 +154,6 @@ h2 {
         font-weight: normal;
     }
 
-    .btn-blue {
-        background-color: $blue;
-        color: $white !important;
-    }
-
     .btn-b-blue {
         border: 1px solid $blue !important;
         border-radius: 3px;
@@ -210,7 +205,18 @@ button,
     font-weight: normal;
     font-size: 0.9rem;
     padding: 12px 24px;
-    border-radius: 12px;
+    border-radius: 6px;
+    outline: 0;
+    border: 0;
 }
 
-.btn
+.btn-blue {
+    background-color: $blue !important;
+    color: $white !important;
+}
+
+.btn-border-blue {
+    color: $blue !important;
+    border: 1px solid $blue !important;
+    background-color: $white !important;
+}

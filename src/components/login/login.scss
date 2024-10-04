@@ -37,7 +37,7 @@
         background-color: $white;
         border-radius: 40px;
         box-shadow: 0 0 5px #cdcdcde0;
-        padding: 40px;
+        padding: 25px;
         margin-bottom: 20px;
 
         h1 {
@@ -57,7 +57,7 @@
         }
 
         .form-login {
-            padding: 30px;
+            padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 5px #cdcdcde0;
             background-color: $bg2;
@@ -68,54 +68,53 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
 
         button {
-            min-width: 49%;
-            width: fit-content;
-            margin-bottom: 18px;
-            border-radius: 3px;
-            outline: 0;
-            border: 0;
-            font-size: 0.8rem;
-            transition: 0.3s;
-            cursor: pointer;
-        }
-
-        button:hover {
-            transition: 0.3s;
-            transform: translateY(-3px);
-            background-color: $blue;
-            color: $white;
-        }
-
-        .btn-fill-blue {
-            background-color: $blue;
-            color: $white;
-        }
-
-        .btn-border-blue {
-            background-color: $white;
-            border: 1.2px solid $blue;
-            color: $blue;
+            margin-bottom: 15px;
+            width: 49%;
+            min-width: 160px;
         }
 
         .p-warning {
             display: flex;
-            align-items: flex-end;
+            align-items: flex-start;
             justify-content: flex-start;
+            margin-top: 15px;
 
             img {
                 width: 20px;
                 object-fit: contain;
-                margin-right: 10px;
+                margin-right: 7px;
             }
 
             p {
                 color: $orange;
-                font-size: 0.65rem;
-                line-height: 1;
+                font-size: 1rem;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media(min-width:468px) {
+    .s-login {
+        .wrap-login {
+            .btns-form {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+@media(min-width:578px) {
+    .s-login {
+        .wrap-login {
+            padding: 40px;
+
+            .form-login {
+                padding: 30px;
             }
         }
     }
