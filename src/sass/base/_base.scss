@@ -203,3 +203,14 @@ a.link {
 .nowrap {
     text-wrap: nowrap !important;
 }
+
+button,
+.btn-big {
+    font-family: $font1;
+    font-weight: normal;
+    font-size: 0.9rem;
+    padding: 12px 24px;
+    border-radius: 12px;
+}
+
+.btn
