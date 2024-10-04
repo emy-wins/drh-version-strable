@@ -1,0 +1,134 @@
+.s-login {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    min-height: 95vh;
+    overflow: hidden;
+
+    .img-login {
+        width: 140px;
+        margin: 0 auto 15px;
+
+        img {
+            object-position: center;
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .image-login {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+        display: none;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    .wrap-login {
+        width: 100%;
+        background-color: $white;
+        border-radius: 40px;
+        box-shadow: 0 0 5px #cdcdcde0;
+        padding: 40px;
+        margin-bottom: 20px;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.23rem !important;
+        }
+
+        .label-inpt {
+            font-size: 1rem;
+            color: $color-text;
+            font-family: 'Poppins';
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+            line-height: 1;
+        }
+
+        .form-login {
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #cdcdcde0;
+            background-color: $bg2;
+        }
+
+        .btns-form {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        button {
+            min-width: 49%;
+            width: fit-content;
+            margin-bottom: 18px;
+            border-radius: 3px;
+            outline: 0;
+            border: 0;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transition: 0.3s;
+            transform: translateY(-3px);
+            background-color: $blue;
+            color: $white;
+        }
+
+        .btn-fill-blue {
+            background-color: $blue;
+            color: $white;
+        }
+
+        .btn-border-blue {
+            background-color: $white;
+            border: 1.2px solid $blue;
+            color: $blue;
+        }
+
+        .p-warning {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+
+            img {
+                width: 20px;
+                object-fit: contain;
+                margin-right: 10px;
+            }
+
+            p {
+                color: $orange;
+                font-size: 0.65rem;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+@media(min-width:992px) {
+    .s-login {
+        .img-login {
+            width: 180px;
+        }
+
+        .image-login {
+            display: block;
+        }
+    }
+}
