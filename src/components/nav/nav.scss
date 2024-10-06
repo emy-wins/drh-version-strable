@@ -1,0 +1,230 @@
+.s-navbar {
+    width: 100%;
+    padding: 20px 10px;
+    background-color: $bg2;
+    height: 100%;
+    min-width: 212px;
+    //mobile
+    min-height: auto;
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        position: relative;
+        z-index: 3;
+        position: absolute;
+        right: 0;
+        top: 20px;
+
+        span {
+            width: 25px;
+            height: 1.9px;
+            background-color: $blue;
+            margin-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        span.tree {
+            margin-bottom: 0;
+        }
+    }
+
+    .hamburger.close {
+        span.one {
+            transform: translateY(8px)rotate(45deg) !important;
+        }
+
+        span.two {
+            opacity: 0 !important;
+        }
+
+        span.tree {
+            transform: translateY(-6px) rotate(132deg);
+        }
+    }
+
+    .img-fonc {
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid $blue;
+        margin: 0;
+        width: 60px;
+        height: 60px;
+
+        img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .text-infos {
+        margin-bottom: 30px;
+    }
+
+    p {
+        font-size: 1rem;
+        font-family: $font1;
+        color: $color-text;
+        text-align: center;
+        line-height: 1.4;
+        width: fit-content;
+        display: none;
+    }
+
+    .p-strong {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .menu {
+        //mobile
+        width: 100%;
+        box-shadow: 0 3px 4px #0000005c;
+        position: fixed;
+        z-index: 36;
+        top: 84px;
+        left: 0;
+        background-color: #fafafa;
+        opacity: 0;
+        transition: 0.3s;
+        pointer-events: none;
+
+        li {
+            transition: 0.3s;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            padding: 0.5rem;
+
+            a {
+                text-decoration: none !important;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                font-family: $font1;
+                font-weight: normal;
+                line-height: 1;
+                font-size: 1rem;
+                color: $color-text;
+
+                img {
+                    width: 30px;
+                    height: 24px;
+                    margin-right: 13px;
+                    object-fit: contain;
+                    object-position: left;
+                }
+
+                .img-hover {
+                    display: none;
+                }
+            }
+        }
+
+        .active-itm {
+            background-color: transparent;
+
+            a {
+                color: $blue;
+            }
+        }
+
+        li:hover {
+            transition: 0.3s;
+        }
+    }
+
+    .menu.menu-active {
+        pointer-events: fill;
+        opacity: 1;
+        transition: 0.3s;
+    }
+}
+
+@media(min-width:992px) {
+    .s-navbar {
+        min-height: 100vh;
+
+        .hamburger {
+            display: none;
+        }
+
+        .img-fonc {
+            width: 140px;
+            height: 140px;
+            margin: 0px auto 15px;
+        }
+
+        p {
+            display: block;
+        }
+
+
+        .menu {
+            width: 100%;
+            box-shadow: unset;
+            position: unset;
+            z-index: 36;
+            opacity: 1;
+            pointer-events: fill;
+
+            li {
+                padding: 1.1rem;
+                border-radius: 10px;
+                margin-bottom: 10px;
+
+                a {
+                    text-decoration: none !important;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-family: $font1;
+                    font-weight: normal;
+                    line-height: 1;
+                    font-size: 1rem;
+                    color: $color-text;
+
+                    img {
+                        width: 30px;
+                        height: 24px;
+                        margin-right: 13px;
+                        object-fit: contain;
+                        object-position: left;
+                    }
+
+                    .img-hover {
+                        display: none;
+                    }
+                }
+            }
+
+            .active-itm {
+                background-color: $blue;
+
+                a {
+                    color: $bg2;
+
+                    .img-normaml {
+                        display: none;
+                    }
+
+                    .img-hover {
+                        display: block;
+                    }
+                }
+            }
+
+            li:hover {
+
+                background-color: $bluehover;
+            }
+        }
+    }
+}

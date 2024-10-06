@@ -1,0 +1,1187 @@
+<div class="s-dashboard" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="900">
+	<div class="grid-cols-2">
+		{% include '../../components/nav-dashboard/nav-dashboard.twig' %}
+		<div class="s-infos">
+
+			<div class="d-flex justify-content-between flex-wrap align-items-center mb-5">
+				<h1 class="mb-0">AJOUTER</h1>
+				<div>
+					<a href="dashboard.html">Revenir au tableau de bord</a>
+				</div>
+			</div>
+			<div class="s-formations bg-white">
+				<div class="tabs-formation tabs-ajouter">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link active" id="imprimés-tab" data-bs-toggle="tab" data-bs-target="#imprimés-tab-pane" type="button" role="tab" aria-controls="imprimés-tab-pane" aria-selected="true">
+								<span>Informations Personnelle</span>
+								<img src="../assets/images/icons/1.png" alt=""/>
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="congés-tab" data-bs-toggle="tab" data-bs-target="#congés-tab-pane" type="button" role="tab" aria-controls="congés-tab-pane" aria-selected="true">
+								<span>Informations Familiale</span>
+								<img src="../assets/images/icons/2.png" alt=""/>
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="échelons-tab" data-bs-toggle="tab" data-bs-target="#échelons-tab-pane" type="button" role="tab" aria-controls="échelons-tab-pane" aria-selected="true">
+								<span>Informations  d'hébergement</span>
+								<img src="../assets/images/icons/3.png" alt=""/>
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="grade-tab" data-bs-toggle="tab" data-bs-target="#grade-tab-pane" type="button" role="tab" aria-controls="grade-tab-pane" aria-selected="true">
+								<span>Parcours Professionnel</span>
+								<img src="../assets/images/icons/4.png" alt=""/>
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="aptitude-tab" data-bs-toggle="tab" data-bs-target="#aptitude-tab-pane" type="button" role="tab" aria-controls="aptitude-tab-pane" aria-selected="true">
+								<span>Parcours Académique</span>
+								<img src="../assets/images/icons/5.png" alt=""/>
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link" id="formation-tab" data-bs-toggle="tab" data-bs-target="#formation-tab-pane" type="button" role="tab" aria-controls="formation-tab-pane" aria-selected="true">
+								<span>Formations</span>
+								<img src="../assets/images/icons/6.png" alt=""/>
+							</button>
+						</li>
+					</ul>
+					<form action="#" method="post">
+						<div class="tab-content" id="myTabContent">
+							<div class="tab-pane fade show active" id="imprimés-tab-pane" role="tabpanel" aria-labelledby="imprimés-tab" tabindex="0">
+								<div class="s-ajouter">
+									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
+										<strong>Informations Personnelle</strong>
+										<div>
+											<u>Champ obligatoire
+												<span class="text-danger">*</span>
+											</u>
+											<u class="ms-3">Champ obligatoire si disponibles
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</u>
+										</div>
+									</div>
+									<div class="mt-5 d-grid-4">
+										<div class="input-form">
+											<label>Nom
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Sexe
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>CNIE
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form p-relative">
+											<label>Importer la CNIE
+												<span class="text-danger">*</span>
+											</label>
+											<input type="file"/>
+											<div class="uploadfile">
+												<span>La CNIE ...</span>
+												<img src="../assets/images/svg/upload.svg" alt=""/>
+											</div>
+										</div>
+										<div class="input-form">
+											<label>Valable jusqu'au
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="input-form p-relative">
+											<label>Importer la photo du fonctionnaire
+												<span class="text-danger">*</span>
+											</label>
+											<input type="file"/>
+											<div class="uploadfile">
+												<span>La photo</span>
+												<img src="../assets/images/svg/upload.svg" alt=""/>
+											</div>
+										</div>
+										<div class="input-form">
+											<label>Prénom du père
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom du grand père paternel
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom de la mère
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom du grand père maternel
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Date de naissance
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="input-form">
+											<label>Lieu de naissance
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Province ou ville de naissance
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Commune de naissance
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form p-relative">
+											<label>Importer l'attestation du RIB
+												<span class="text-danger">*</span>
+											</label>
+											<input type="file"/>
+											<div class="uploadfile">
+												<span>L'attestation du RIB</span>
+												<img src="../assets/images/svg/upload.svg" alt=""/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="congés-tab-pane" role="tabpanel" aria-labelledby="congés-tab" tabindex="0">
+								<div class="s-ajouter">
+									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
+										<strong>Informations Familiale</strong>
+										<div>
+											<u>Champ obligatoire
+												<span class="text-danger">*</span>
+											</u>
+											<u class="ms-3">Champ obligatoire si disponibles
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</u>
+										</div>
+									</div>
+									<div class="d-grid-4 mt-3 mb-3">
+										<div class="input-form">
+											<label>Année État Civil
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="input-form">
+											<label>Etat civil N°
+												<span class="text-danger">*</span>
+											</label>
+											<input type="number" min="0" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>IDCS
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="p-relative input-form">
+											<label>Importer l'extrait de naissance
+												<span class="text-danger">*</span>
+											</label>
+											<input type="file"/>
+											<div class="uploadfile">
+												<span>L'extrait de naissance</span>
+												<img src="../assets/images/svg/upload.svg" alt=""/>
+											</div>
+										</div>
+										<div class="input-form">
+											<label>Situation de famille
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>Marie</option>
+												<option>cele</option>
+												<option>veuf/veuve</option>
+											</select>
+										</div>
+									</div>
+									<div class="w-100  wrap-famille mb-5">
+										<strong>Ajouter l'époux (se)</strong>
+										<div class="form-partner">
+											<form action="#" method="post">
+												<div class="d-grid-4 mt-5  mb-5">
+													<div class="input-form">
+														<label>Nom de l'époux (se)
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>Prénom de l'époux (se)
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>N° CNIE de l'époux (se)
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text"/>
+													</div>
+													<div class="p-relative input-form">
+														<label>Importer la CNIE de l'époux (se)
+															<span class="text-danger">*</span>
+														</label>
+														<input type="file"/>
+														<div class="uploadfile">
+															<span>La CNIE de l'époux (se)</span>
+															<img src="../assets/images/svg/upload.svg" alt=""/>
+														</div>
+													</div>
+													<div class="input-form">
+														<label>Valable jusqu'au
+															<span class="text-danger">*</span>
+														</label>
+														<input type="date"/>
+													</div>
+													<div class="input-form">
+														<label>Date de naissance de l'époux (se)
+															<span class="text-danger">*</span>
+														</label>
+														<input type="date"/>
+													</div>
+													<div class="input-form">
+														<label>Lieu de naissance de l'époux (se)
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+
+													<div class="input-form">
+														<label>IDSC de l'époux (se)
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text"/>
+													</div>
+													<div class="p-relative input-form">
+														<label>Importer Acte de mariage
+															<span class="text-danger">*</span>
+														</label>
+														<input type="file"/>
+														<div class="uploadfile">
+															<span>Acte de mariage</span>
+															<img src="../assets/images/svg/upload.svg" alt=""/>
+														</div>
+													</div>
+													<div class="input-form">
+														<label>Nombre d'enfants
+															<span class="text-danger">*</span>
+														</label>
+														<input type="number" min="0" autocomplete="false"/>
+													</div>
+												</div>
+											</form>
+										</div>
+										<div class="form-child">
+											<strong>Inscrire les enfants</strong>
+											<form action="#" method="post">
+												<div class="d-grid-4  mt-5">
+													<div class="input-form">
+														<label>Nom de l'enfant FR
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>Nom de l'enfant AR
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>Prénom de l'enfant FR
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>Prénom de l'enfant AR
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>Sexe
+															<span class="text-danger">*</span>
+														</label>
+														<select>
+															<option>Fille</option>
+															<option>Garçon</option>
+														</select>
+													</div>
+													<div class="input-form">
+														<label>Date de naissance de l'enfant
+															<span class="text-danger">*</span>
+														</label>
+														<input type="date"/>
+													</div>
+
+													<div class="input-form">
+														<label>Année État Civil
+															<span class="text-danger">*</span>
+														</label>
+														<input type="number"/>
+													</div>
+													<div class="file input-form">
+														<label>Importer l'extrait de naissance
+															<span class="text-danger">*</span>
+														</label>
+														<input type="file"/>
+														<div class="uploadfile">
+															<span>L'extrait de naissance</span>
+															<img src="../assets/images/svg/upload.svg" alt=""/>
+														</div>
+													</div>
+													<div class="input-form">
+														<label>Lieu de naissance de l'enfant FR
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>Lieu de naissance de l'enfant AR
+															<span class="text-danger">*</span>
+														</label>
+														<input type="text" autocomplete="false"/>
+													</div>
+													<div class="input-form">
+														<label>Etat civil N°
+															<span class="text-danger">*</span>
+														</label>
+														<input type="number" min="0"/>
+													</div>
+													<div class="input-form">
+														<label>IDSC de l'enfant
+															<span class="text-warning">*</span>
+															<span class="text-danger">*</span>
+														</label>
+														<input type="number" min="0" autocomplete="false"/>
+													</div>
+												</div>
+												<div class="d-flex align-items-center justify-content-end mt-5 mb-5">
+													<button class="btn-small btn-border-blue">Vider</button>
+													<button class="btn-small btn-blue ms-3">Ajouter</button>
+												</div>
+											</form>
+										</div>
+										<div class="s-situation-f">
+											<div class="s-table mb-4">
+												<table class="table table-enfants text-center">
+													<thead>
+														<tr>
+															<th scope="col">Nom et prénom d' époux (se)</th>
+															<th scope="col">
+																CNIE
+															</th>
+															<th scope="col">
+																IDSC
+															</th>
+															<th scope="col">
+																Date de naissance
+															</th>
+															<th scope="col">
+																Nombre d'enfants
+															</th>
+															<th scope="col">
+																Actions
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Collins Patricia</td>
+															<td>XX0000</td>
+															<td>00000000</td>
+															<td>00/00/0000</td>
+															<td>02</td>
+															<td class="action-download">
+																<a href="#">Modifier</a>
+																<a href="#">Supprimer</a>
+															</td>
+														</tr>
+														<tr>
+															<td colspan="7">
+																<table class="table table-enfants text-center">
+																	<thead>
+																		<tr>
+																			<th scope="col">Nom et Prénom d' enfant</th>
+																			<th scope="col">
+																				Sexe
+																			</th>
+																			<th scope="col">
+																				Date de naissance
+																			</th>
+																			<th scope="col">
+																				N° d'état civil
+																			</th>
+																			<th scope="col">
+																				IDSC
+																			</th>
+																			<th scope="col">
+																				Extrait de naissance
+																			</th>
+
+																			<th scope="col">
+																				Actions
+																			</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Doe Jane</td>
+																			<td>Femme</td>
+																			<td>00 / 00 / 0000</td>
+																			<td>000/AAAA</td>
+																			<td>0000000</td>
+																			<td>
+																				<a href="#" download>Extrait de naissance.png</a>
+																			</td>
+
+																			<td class="action-download">
+																				<a href="#">Modifier</a>
+																				<a href="#">Supprimer</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td>Doe Jane</td>
+																			<td>Femme</td>
+																			<td>00 / 00 / 0000</td>
+																			<td>000/AAAA</td>
+																			<td>0000000</td>
+																			<td>
+																				<a href="#" download>Extrait de naissance.png</a>
+																			</td>
+
+																			<td class="action-download">
+																				<a href="#">Modifier</a>
+																				<a href="#">Supprimer</a>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+									<div class="d-flex align-items-center justify-content-end mb-3">
+										<button class="btn-big btn-blue add-famille">Ajouter famille</button>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="échelons-tab-pane" role="tabpanel" aria-labelledby="échelons-tab" tabindex="0">
+								<div class="s-ajouter">
+									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
+										<strong>Cordonnées et détails d'hébergement</strong>
+										<div>
+											<u>Champ obligatoire
+												<span class="text-danger">*</span>
+											</u>
+											<u class="ms-3">Champ obligatoire si disponibles
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</u>
+										</div>
+									</div>
+									<div class="d-grid-4">
+										<div class="input-form">
+											<label>Commune de résidence
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+
+										<div class="input-form">
+											<label>Province ou ville de résidence
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text"/>
+										</div>
+										<div class="input-form">
+											<label>
+												Adresse e-mail
+												<span class="text-danger">*</span>
+											</label>
+											<input type="email"/>
+										</div>
+										<div class="input-form">
+											<label>Numéro de téléphone
+												<span class="text-danger">*</span>
+											</label>
+											<input type="tel"/>
+										</div>
+										<div class="input-form">
+											<label>Adresse
+												<span class="text-danger">*</span>
+											</label>
+											<textarea autocomplete="false"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="grade-tab-pane" role="tabpanel" aria-labelledby="grade-tab" tabindex="0">
+								<div class="s-ajouter">
+									<div class="d-flex  justify-content-between flex-wrap align-items-center mb-3">
+										<strong>Parcours Professionnel</strong>
+										<div>
+											<u>Champ obligatoire
+												<span class="text-danger">*</span>
+											</u>
+											<u class="ms-3">Champ obligatoire si disponibles
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</u>
+										</div>
+									</div>
+									<div class="mt-5 mb-5 d-grid-4">
+										<div class="input-form">
+											<label>Mode
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Mutation / Recrutement
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Situation Statutaire
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Situation Statutaire
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Date de recrutement
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="input-form">
+											<label>PPR
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</label>
+											<input type="number" min="0" autocomplete="false"/>
+										</div>
+										<div class="p-relative input-form">
+											<label>
+												Arrête de titularisation
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</label>
+											<input type="file"/>
+											<div class="uploadfile">
+												<span>Arrête de titularisation</span>
+												<img src="../assets/images/svg/upload.svg" alt=""/>
+											</div>
+										</div>
+										<div class="input-form">
+											<label>Catégorie
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Catégorie
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Grade
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Grade
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Echelle
+												<span class="text-danger">*</span>
+											</label>
+											<input type="number" min="0" autocomplete="false">
+										</div>
+										<div class="input-form">
+											<label>Echelon
+												<span class="text-danger">*</span>
+											</label>
+											<input type="number" min="0" autocomplete="false">
+										</div>
+										<div class="input-form">
+											<label>
+												Date d'effet du grade
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="input-form">
+											<label>
+												Date d'effet échelon
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="p-relative input-form">
+											<label>
+												Arrête
+												<span class="text-danger">*</span>
+											</label>
+											<input type="file"/>
+											<div class="uploadfile">
+												<span>Arrête</span>
+												<img src="../assets/images/svg/upload.svg" alt=""/>
+											</div>
+										</div>
+										<div class="input-form">
+											<label>Affectation
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													SG
+												</option>
+												<option>
+													Commandment
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label></label>
+											<select>
+												<option>
+													Division
+												</option>
+												<option>
+													Pachalik
+												</option>
+												<option>
+													Cercle
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label></label>
+											<select>
+												<option>
+													Service
+												</option>
+												<option>
+													Annexe
+												</option>
+												<option>
+													Caïdat
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Fonction
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Fonction ..
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Date d'affectation
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+									</div>
+
+									<div class="d-flex align-items-end justify-content-between">
+										<u>Situation Administrative</u>
+									</div>
+									<div class="s-situation-f">
+										<div class="s-table mb-4">
+											<table class="table table-enfants text-center">
+												<thead>
+													<tr>
+														<th scope="col">Date</th>
+														<th scope="col">
+															Grade
+														</th>
+														<th scope="col">
+															Échelle
+														</th>
+														<th scope="col">
+															Échelon
+														</th>
+														<th scope="col">
+															Indice
+														</th>
+														<th scope="col">
+															Date d'effet du grade
+														</th>
+														<th scope="col">
+															Date d'effet échelon
+														</th>
+														<th scope="col">
+															Arrête
+														</th>
+														<th scope="col">
+															Action
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>01 / 01 / 2004</td>
+														<td>Ingénieur d'application grade principal</td>
+														<td>10</td>
+														<td>01</td>
+														<td>402- 01</td>
+														<td>01 / 01 / 2004</td>
+														<td>01 / 01 / 2004</td>
+														<td>Arrête.png</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>01 / 01 / 2004</td>
+														<td>Ingénieur d'application grade principal</td>
+														<td>10</td>
+														<td>01</td>
+														<td>402- 01</td>
+														<td>01 / 01 / 2004</td>
+														<td>01 / 01 / 2004</td>
+														<td>Arrête.png</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<u>Affectations</u>
+									<div class="s-situation-f">
+										<div class="s-table mb-4">
+											<table class="table table-enfants text-center">
+												<thead>
+													<tr>
+														<th scope="col">Date d'affectation</th>
+														<th scope="col">
+															Affectation
+														</th>
+														<th scope="col">
+															Fonction
+														</th>
+														<th scope="col">
+															Action
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>01 / 01 / 2004</td>
+														<td>SG / DIV / SERVICE</td>
+														<td>Fonctionnaire</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>01 / 01 / 2004</td>
+														<td>SG / DIV / SERVICE</td>
+														<td>Fonctionnaire</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="aptitude-tab-pane" role="tabpanel" aria-labelledby="aptitude-tab" tabindex="0">
+								<div class="s-ajouter">
+									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
+										<strong>Parcours Académique</strong>
+										<div>
+											<u>Champ obligatoire
+												<span class="text-danger">*</span>
+											</u>
+											<u class="ms-3">Champ obligatoire si disponibles
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</u>
+										</div>
+									</div>
+									<div class="mt-5 mb-5 d-grid-4">
+										<div class="input-form">
+											<label>Nom de diplôme
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Spécialité de diplôme
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Spécialité
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>
+												Type de diplôme
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Type
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Établissement
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Spécialité
+												</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>Date de remise du diplôme
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="input-form">
+											<label>
+												Catégorie de diplôme
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>
+													Catégorie
+												</option>
+											</select>
+										</div>
+										<div class="p-relative input-form">
+											<label>
+												Importer le diplôme
+												<span class="text-danger">*</span>
+											</label>
+											<input type="file"/>
+											<div class="uploadfile">
+												<span>Le diplôme</span>
+												<img src="../assets/images/svg/upload.svg" alt=""/>
+											</div>
+										</div>
+									</div>
+
+									<div class="s-situation-f">
+										<div class="s-table mb-4">
+											<table class="table table-enfants text-center">
+												<thead>
+													<tr>
+														<th scope="col">Diplôme</th>
+														<th scope="col">
+															Spécialité
+														</th>
+														<th scope="col">
+															Établissement
+														</th>
+														<th scope="col">
+															Type
+														</th>
+														<th scope="col">
+															Categorie
+														</th>
+														<th scope="col">
+															Date de remise
+														</th>
+														<th scope="col">
+															Action
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Diplôme</td>
+														<td>Sciences Economiques</td>
+														<td>UNIVERSITÉ MOHAMED V</td>
+														<td>Master</td>
+														<td>Diplôme de recrutement</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="formation-tab-pane" role="tabpanel" aria-labelledby="formation-tab" tabindex="0">
+								<div class="s-ajouter">
+									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
+										<strong>Formation</strong>
+										<div>
+											<u>Champ obligatoire
+												<span class="text-danger">*</span>
+											</u>
+											<u class="ms-3">Champ obligatoire si disponibles
+												<span class="text-warning">*</span>
+												<span class="text-danger">*</span>
+											</u>
+										</div>
+									</div>
+									<div class="mt-5 mb-5 d-grid-4">
+										<div class="input-form">
+											<label>Titre de formation
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Domaine de formation
+												<span class="text-danger">*</span>
+											</label>
+											<select>
+												<option>Domaine de formation …</option>
+											</select>
+										</div>
+										<div class="input-form">
+											<label>
+												Date début
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+										<div class="input-form">
+											<label>
+												Date fin
+												<span class="text-danger">*</span>
+											</label>
+											<input type="date"/>
+										</div>
+									</div>
+									<div class="s-situation-f">
+										<div class="s-table mb-4">
+											<table class="table table-enfants text-center">
+												<thead>
+													<tr>
+														<th scope="col">Titre de formation</th>
+														<th scope="col">
+															Domaine de formation
+														</th>
+														<th scope="col">
+															Date début
+														</th>
+														<th scope="col">
+															Date fin
+														</th>
+														<th scope="col">
+															Action
+														</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>Titre de formation</td>
+														<td>Domaine de formation</td>
+														<td>00 / 00 / 0000</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Titre de formation</td>
+														<td>Domaine de formation</td>
+														<td>00 / 00 / 0000</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Titre de formation</td>
+														<td>Domaine de formation</td>
+														<td>00 / 00 / 0000</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Titre de formation</td>
+														<td>Domaine de formation</td>
+														<td>00 / 00 / 0000</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+													<tr>
+														<td>Titre de formation</td>
+														<td>Domaine de formation</td>
+														<td>00 / 00 / 0000</td>
+														<td>00 / 00 / 0000</td>
+														<td class="action-download">
+															<a href="#">Modifier</a>
+															<a href="#">Supprimer</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
