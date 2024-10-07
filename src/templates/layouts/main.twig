@@ -11,14 +11,22 @@
 	</head>
 	<body class="{% block body_class %}{% endblock %} light">
 		{% include '../components/header.twig' %}
-		<main class="main"> {% block main %}{% endblock %}
-			</main>
-			{% include '../components/footer.twig' %}
-			<script type="module" src="assets/js/detects.js"></script>
-			<script type="module" src="assets/js/another-file.js"></script>
-			<script src="assets/js/plugins.js"></script>
-			<script type="module" src="assets/js/chart.js"></script>
-			<script type="module" src="assets/js/main.js"></script>
-			<script type="module" src="assets/js/components.js"></script>
-		</body>
-	</html>
+		<main class="main">
+			<div class="loader">
+				<div class="spinner">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+				</div>
+			</div>
+			{% block main %}{% endblock %}
+		</main>
+		{% include '../components/footer.twig' %}
+		<script type="module" src="assets/js/detects.js"></script>
+		<script type="module" src="assets/js/another-file.js"></script>
+		<script src="assets/js/plugins.js"></script>
+		<script type="module" src="assets/js/chart.js"></script>
+		<script type="module" src="assets/js/main.js"></script>
+		<script type="module" src="assets/js/components.js"></script>
+	</body>
+</html>

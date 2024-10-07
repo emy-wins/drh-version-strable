@@ -231,6 +231,13 @@
 
 .s-ajouter {
     padding: 10px 40px 40px;
+    min-height: 79vh;
+
+    .btns-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
     label {
         margin-bottom: 5px;

@@ -55,7 +55,7 @@
 								<div class="s-ajouter">
 									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
 										<strong>Informations Personnelle</strong>
-										<div>
+										<div class="mt-4">
 											<u>Champ obligatoire
 												<span class="text-danger">*</span>
 											</u>
@@ -67,13 +67,26 @@
 									</div>
 									<div class="mt-5 d-grid-4">
 										<div class="input-form">
-											<label>Nom
+											<label>Nom FR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
 										</div>
 										<div class="input-form">
-											<label>Prénom
+											<label>Nom AR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+
+										<div class="input-form">
+											<label>Prénom FR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom AR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
@@ -117,25 +130,49 @@
 											</div>
 										</div>
 										<div class="input-form">
-											<label>Prénom du père
+											<label>Prénom du père FR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
 										</div>
 										<div class="input-form">
-											<label>Prénom du grand père paternel
+											<label>Prénom du père AR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
 										</div>
 										<div class="input-form">
-											<label>Prénom de la mère
+											<label>Prénom du grand père paternel FR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
 										</div>
 										<div class="input-form">
-											<label>Prénom du grand père maternel
+											<label>Prénom du grand père paternel AR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom de la mère FR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom de la mère AR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom du grand père maternel FR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Prénom du grand père maternel AR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
@@ -147,19 +184,37 @@
 											<input type="date"/>
 										</div>
 										<div class="input-form">
-											<label>Lieu de naissance
+											<label>Lieu de naissance FR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
 										</div>
 										<div class="input-form">
-											<label>Province ou ville de naissance
+											<label>Lieu de naissance AR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
 										</div>
 										<div class="input-form">
-											<label>Commune de naissance
+											<label>Province ou ville de naissance FR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Province ou ville de naissance AR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Commune de naissance FR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Commune de naissance AR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
@@ -175,13 +230,19 @@
 											</div>
 										</div>
 									</div>
+									<div class="btns-group mt-5">
+										<div>
+											<a href="javascript:void(0);" class="btn-border-blue btn btn-small">Vider</a>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Suivant</a>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="congés-tab-pane" role="tabpanel" aria-labelledby="congés-tab" tabindex="0">
 								<div class="s-ajouter">
 									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
 										<strong>Informations Familiale</strong>
-										<div>
+										<div class="mt-4">
 											<u>Champ obligatoire
 												<span class="text-danger">*</span>
 											</u>
@@ -506,13 +567,23 @@
 									<div class="d-flex align-items-center justify-content-end mb-3">
 										<button class="btn-big btn-blue add-famille">Ajouter famille</button>
 									</div>
+									<div class="btns-group d-flex mt-5">
+										<div>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Précédent
+											</a>
+										</div>
+										<div>
+											<a href="javascript:void(0);" class="btn-border-blue btn btn-small">Vider</a>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Suivant</a>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="échelons-tab-pane" role="tabpanel" aria-labelledby="échelons-tab" tabindex="0">
 								<div class="s-ajouter">
 									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
 										<strong>Cordonnées et détails d'hébergement</strong>
-										<div>
+										<div class="mt-4">
 											<u>Champ obligatoire
 												<span class="text-danger">*</span>
 											</u>
@@ -524,14 +595,26 @@
 									</div>
 									<div class="d-grid-4">
 										<div class="input-form">
-											<label>Commune de résidence
+											<label>Commune de résidence FR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text" autocomplete="false"/>
+										</div>
+										<div class="input-form">
+											<label>Commune de résidence AR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text" autocomplete="false"/>
 										</div>
 
 										<div class="input-form">
-											<label>Province ou ville de résidence
+											<label>Province ou ville de résidence FR
+												<span class="text-danger">*</span>
+											</label>
+											<input type="text"/>
+										</div>
+										<div class="input-form">
+											<label>Province ou ville de résidence AR
 												<span class="text-danger">*</span>
 											</label>
 											<input type="text"/>
@@ -550,10 +633,26 @@
 											<input type="tel"/>
 										</div>
 										<div class="input-form">
-											<label>Adresse
+											<label>Adresse FR
 												<span class="text-danger">*</span>
 											</label>
 											<textarea autocomplete="false"></textarea>
+										</div>
+										<div class="input-form">
+											<label>Adresse AR
+												<span class="text-danger">*</span>
+											</label>
+											<textarea autocomplete="false"></textarea>
+										</div>
+									</div>
+									<div class="btns-group d-flex mt-5">
+										<div>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Précédent
+											</a>
+										</div>
+										<div>
+											<a href="javascript:void(0);" class="btn-border-blue btn btn-small">Vider</a>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Suivant</a>
 										</div>
 									</div>
 								</div>
@@ -562,7 +661,7 @@
 								<div class="s-ajouter">
 									<div class="d-flex  justify-content-between flex-wrap align-items-center mb-3">
 										<strong>Parcours Professionnel</strong>
-										<div>
+										<div class="mt-4">
 											<u>Champ obligatoire
 												<span class="text-danger">*</span>
 											</u>
@@ -843,13 +942,23 @@
 											</table>
 										</div>
 									</div>
+									<div class="btns-group d-flex mt-5">
+										<div>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Précédent
+											</a>
+										</div>
+										<div>
+											<a href="javascript:void(0);" class="btn-border-blue btn btn-small">Vider</a>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Suivant</a>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="aptitude-tab-pane" role="tabpanel" aria-labelledby="aptitude-tab" tabindex="0">
 								<div class="s-ajouter">
 									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
 										<strong>Parcours Académique</strong>
-										<div>
+										<div class="mt-4">
 											<u>Champ obligatoire
 												<span class="text-danger">*</span>
 											</u>
@@ -926,7 +1035,6 @@
 											</div>
 										</div>
 									</div>
-
 									<div class="s-situation-f">
 										<div class="s-table mb-4">
 											<table class="table table-enfants text-center">
@@ -1054,13 +1162,23 @@
 											</table>
 										</div>
 									</div>
+									<div class="btns-group d-flex mt-5">
+										<div>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Précédent
+											</a>
+										</div>
+										<div>
+											<a href="javascript:void(0);" class="btn-border-blue btn btn-big">Vider</a>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Suivant</a>
+										</div>
+									</div>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="formation-tab-pane" role="tabpanel" aria-labelledby="formation-tab" tabindex="0">
 								<div class="s-ajouter">
 									<div class="d-flex justify-content-between flex-wrap align-items-center mb-3">
 										<strong>Formation</strong>
-										<div>
+										<div class="mt-4">
 											<u>Champ obligatoire
 												<span class="text-danger">*</span>
 											</u>
@@ -1173,6 +1291,16 @@
 													</tr>
 												</tbody>
 											</table>
+										</div>
+									</div>
+									<div class="btns-group d-flex mt-5">
+										<div>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Précédent
+											</a>
+										</div>
+										<div>
+											<a href="javascript:void(0);" class="btn-border-blue btn btn-small">Vider</a>
+											<a href="javascript:void(0);" class="btn-blue btn btn-small">Suivant</a>
 										</div>
 									</div>
 								</div>
