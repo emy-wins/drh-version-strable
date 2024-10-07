@@ -105,62 +105,6 @@ h2 {
     font-weight: bold !important;
 }
 
-
-
-
-.btns-links {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-
-    a {
-        padding: 8px 30px;
-        font-family: $font1;
-        font-weight: normal;
-    }
-
-    .btn-b-blue {
-        border: 1px solid $blue !important;
-        border-radius: 3px;
-        background-color: $white;
-        color: $blue;
-    }
-}
-
-
-a.link {
-    padding: 8px 30px;
-    font-family: $font1;
-    font-weight: normal;
-    border-radius: 3px;
-}
-
-.link.btn-blue {
-    background-color: $blue;
-    color: $white !important;
-}
-
-.link.btn-b-blue {
-    border: 1px solid $blue !important;
-    background-color: $white;
-    color: $blue;
-}
-
-.link.btn-red {
-    background-color: red;
-    color: $white !important;
-}
-
-.table>:not(caption)>*>* {
-    padding: 1rem .5rem !important;
-}
-
-.nowrap {
-    text-wrap: nowrap !important;
-}
-
-
 /* buttons standar style */
 
 button,
@@ -192,6 +136,10 @@ button,
     color: $blue !important;
     border: 1px solid $blue !important;
     background-color: $white !important;
+}
+
+input[type="submit"] {
+    width: fit-content !important;
 }
 
 /* position standar style */

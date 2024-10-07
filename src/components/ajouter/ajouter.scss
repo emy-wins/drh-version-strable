@@ -1,0 +1,51 @@
+.s-ajout {
+    background-color: $white;
+
+    form {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.menu-create {
+    width: 100%;
+    background-color: $white;
+    border-radius: 9px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Progressbar */
+.progressbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.progress-step {
+    padding: 1.3rem .2rem 1rem .2rem;
+    width: 16.3%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: $black;
+    font-weight: normal;
+    font-family: $font1;
+    border: 0px;
+}
+
+.progress-step-active {
+    border-bottom: 1px solid $blue;
+    color: $blue;
+}
+
+/* Form */
+.form-step {
+    display: none;
+    padding: 40px;
+}
+
+.form-step-active {
+    display: block;
+}
