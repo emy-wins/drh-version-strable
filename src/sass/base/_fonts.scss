@@ -24,3 +24,12 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'Cairo';
+    src: url('../fonts/Cairo-Regular.woff2') format('woff2'),
+        url('../fonts/Cairo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

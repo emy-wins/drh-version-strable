@@ -207,6 +207,7 @@
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
     gap: 25px;
+    align-items: flex-end;
 }
 
 @media(min-width:585px) {

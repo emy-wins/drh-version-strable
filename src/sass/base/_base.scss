@@ -56,6 +56,10 @@ select {
     min-width: 160px;
 }
 
+label {
+    display: block !important;
+}
+
 .uploadfile,
 textarea,
 select,
@@ -158,13 +162,30 @@ input[type="submit"] {
 }
 
 table {
-    min-width: 1140px;
+    min-width: 1000px;
+
+    th {
+        font-size: 0.8rem;
+    }
 
     td {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
     }
 }
 
-::-webkit-scrollbar {
-    width: 4px !important;
+@media(min-width:1440px) {
+    table {
+        th {
+            font-size: 0.9rem;
+        }
+
+        td {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+:dir(rtl) {
+    font-family: $font2;
+    font-weight: normal;
 }

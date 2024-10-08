@@ -28,11 +28,23 @@
     padding: 1.3rem .2rem 1rem .2rem;
     width: 16.3%;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: $black;
     font-weight: normal;
     font-family: $font1;
     border: 0px;
+}
+
+@media(min-width:1440px) {
+    .progress-step {
+        font-size: 0.9rem;
+    }
+}
+
+@media(min-width:1880px) {
+    .progress-step {
+        font-size: 1rem;
+    }
 }
 
 .progress-step-active {
@@ -44,6 +56,11 @@
 .form-step {
     display: none;
     padding: 40px;
+
+    strong {
+        display: block;
+        font-size: 1.3rem;
+    }
 }
 
 .form-step-active {
