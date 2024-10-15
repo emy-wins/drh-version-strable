@@ -135,7 +135,10 @@ button,
     background-color: $blue !important;
     color: $white !important;
 }
-
+.btn-red{
+    background-color: red !important;
+    color: $white !important;
+}
 .btn-border-blue {
     color: $blue !important;
     border: 1px solid $blue !important;
