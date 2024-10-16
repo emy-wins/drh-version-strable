@@ -7,8 +7,9 @@
     align-items: center;
     justify-content: center;
     background-color: $white;
-    //opacity: 0;
+    opacity: 0;
     flex-direction: column;
+    pointer-events: none;
 
     .img-loader {
         width: 180px;

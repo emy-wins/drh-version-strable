@@ -56,6 +56,7 @@
 .form-step {
     display: none;
     padding: 40px;
+    min-height: 70vh;
 
     strong {
         display: block;
@@ -65,4 +66,69 @@
 
 .form-step-active {
     display: block;
+}
+
+
+.s-dashboard {
+    background-color: $bg;
+
+    .s-infos {
+        padding: 20px;
+        grid-column-end: span 4;
+        grid-row-end: span 1;
+
+        .cols-shild-two {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-flow: dense;
+            gap: 20px;
+            grid-row: auto;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.form-child {
+    background-color: #c1c9ff;
+    padding: 40px;
+}
+
+.d-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+    gap: 25px;
+    align-items: flex-end;
+}
+
+.btns-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+
+@media(min-width:585px) {
+    .d-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+@media(min-width:1100px) {
+    .d-grid-4 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(min-width:1440px) {
+    .d-grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
 }
