@@ -39,6 +39,8 @@
         box-shadow: 0 0 5px #cdcdcde0;
         padding: 25px;
         margin-bottom: 20px;
+        overflow: hidden;
+        display: flex;
 
         h1 {
             text-align: center;
@@ -61,6 +63,12 @@
             border-radius: 5px;
             box-shadow: 0 0 5px #cdcdcde0;
             background-color: $bg2;
+            width: 100%;
+            display: none;
+        }
+
+        .show-form {
+            display: block !important;
         }
 
         .btns-form {
@@ -71,6 +79,7 @@
             flex-direction: column;
         }
 
+        a,
         button {
             margin-bottom: 15px;
             width: 49%;

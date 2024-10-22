@@ -8,26 +8,57 @@
 			</div>
 			<div class="col-lg-6 col-xl-5 p-1">
 				<div class="wrap-login" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="900">
-					<form action="accueil.html" method="get" class="form-login">
+					<form action="accueil.html" method="get" class="form-login lg-form show-form">
 						<div class="img-login">
 							<img src="../assets/images/svg/logo-kigdom.svg" alt=""/>
 						</div>
 						<h1>Bienvenu à votre plateforme</h1>
 						<div class="mb-4">
 							<span class="label-inpt">Entrez votre CNIE</span>
-							<input type="text" placeholder="Ex : XX00000" class=""/>
+							<input type="text" placeholder="Ex : XX00000"/>
 						</div>
 						<div class="mb-4">
 							<span class="label-inpt">Entrez votre mot de passe</span>
-							<input type="password" placeholder="Mot de passe" class=""/>
+							<input type="password" placeholder="Mot de passe"/>
 						</div>
 						<div class="btns-form">
 							<button class="btn-big btn-blue">Se connecter</button>
-							<button class="btn-big btn-border-blue">Mot de passe oublié</button>
+							<a href="javascript:void(0);" class="btn btn-big btn-border-blue btn-oblier">Mot de passe oublié</a>
 						</div>
 						<div class="p-warning">
 							<img src="../assets/images/svg/ic_warning_24px.svg" alt=""/>
 							<p>Merci de ne pas divulguer vos coordonnées personnelles.</p>
+						</div>
+					</form>
+					<form action="#" method="get" class="form-login form-verifier">
+						<div class="img-login">
+							<img src="../assets/images/svg/logo-kigdom.svg" alt=""/>
+						</div>
+						<div class="mb-4">
+							<input type="text" placeholder="CNIE"/>
+						</div>
+						<div class="mb-4">
+							<input type="email" placeholder="Email"/>
+						</div>
+						<div class="mb-4">
+							<input type="date" placeholder="Date naissance"/>
+						</div>
+						<div class="btns-form">
+							<a href="javascript:void(0);" class="btn btn-big btn-blue btn-verifier">verifier</a>
+						</div>
+					</form>
+					<form action="#" method="get" class="form-login form-modifier">
+						<div class="img-login">
+							<img src="../assets/images/svg/logo-kigdom.svg" alt=""/>
+						</div>
+						<div class="mb-4">
+							<input type="text" placeholder="Nouveau mot de pass"/>
+						</div>
+						<div class="mb-4">
+							<input type="text" placeholder="Confirmation mot de passe"/>
+						</div>
+						<div class="btns-form">
+							<button class="btn-big btn-blue btn-modifier">Modifier</button>
 						</div>
 					</form>
 				</div>
