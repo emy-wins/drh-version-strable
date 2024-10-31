@@ -1,1 +1,61 @@
+.chart-corb {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-x: auto;
 
+    .chart {
+        width: 49%;
+        height: 360px;
+        background-color: $white;
+        padding: 30px 10px 10px 10px;
+        min-width: 350px;
+
+        canvas {
+            width: 100% !important;
+            height: 90% !important;
+        }
+    }
+}
+
+.chart-doughnut {
+    width: 100%;
+    background-color: $white;
+    margin-top: 30px;
+
+    .chart-division {
+        background-color: $white;
+        width: fit-content;
+        padding: 20px;
+        box-shadow: 1px 3px 9px #00000030;
+    }
+
+    .slick-slide>div {
+        padding: 10px;
+    }
+
+    canvas {
+        width: 160px !important;
+        height: 160px !important;
+        max-width: 160px !important;
+        max-height: 160px !important;
+    }
+
+    .chartow {
+        width: 100% !important;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        width: fit-content;
+    }
+}
+
+@media(min-width:1880px) {
+    .chart-corb {
+        .chart {
+            height: 370px;
+        }
+    }
+}
