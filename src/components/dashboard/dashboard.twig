@@ -1,6 +1,904 @@
 <div class="s-dashboard" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="900">
 	<div class="grid-cols-2">
 		{% include '../../components/nav-dashboard/nav-dashboard.twig' %}
-		<div class="s-infos"></div>
+		<div class="s-infos">
+			<div class="items-taps item-show" data-show="s-tabbord">
+				<h1 class="mb-3">TABLEAU DE BORD</h1>
+				<div class="s-equip">
+					<div class="slider-eq">
+						<div class="item-eq">
+							<div class="d-flex justify-content-between pt-3 pb-3">
+								<strong class="me-3">Nombre total des fonctionnaires</strong>
+								<strong>00</strong>
+							</div>
+						</div>
+						<div class="item-eq">
+							<div class="d-flex justify-content-between pt-3 pb-3">
+								<strong class="me-3">Fonctionnaires Titulaire</strong>
+								<strong>00</strong>
+							</div>
+						</div>
+						<div class="item-eq">
+							<div class="d-flex justify-content-between pt-3 pb-3">
+								<strong class="me-3">Fonctionnaires Stagiaire</strong>
+								<strong>00</strong>
+							</div>
+						</div>
+						<div class="item-eq">
+							<div class="d-flex justify-content-between pt-3 pb-3">
+								<strong class="me-3">Fonctionnaires mis a la retraite</strong>
+								<strong>00</strong>
+							</div>
+						</div>
+						<div class="item-eq">
+							<div class="d-flex justify-content-between pt-3 pb-3">
+								<strong class="me-3">Fonctionnaires Titulaire</strong>
+								<strong>00</strong>
+							</div>
+						</div>
+						<div class="item-eq">
+							<div class="d-flex justify-content-between pt-3 pb-3">
+								<strong class="me-3">Fonctionnaires Stagiaire</strong>
+								<strong>00</strong>
+							</div>
+						</div>
+						<div class="item-eq">
+							<div class="d-flex justify-content-between pt-3 pb-3">
+								<strong class="me-3">Fonctionnaires mis a la retraite</strong>
+								<strong>00</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="chart-corb mb-4">
+					<div class="chart">
+						<p class="text-center mb-3">Nombre des fonctionnaires ayant exercer à cette province de puis sa création</p>
+						<canvas id="countChart"></canvas>
+					</div>
+					<div class="chart">
+						<p class="text-center mb-3">Statistiques des Fonctionnaires par sexe ayant exercer à cette province de puis sa création.</p>
+						<canvas id="sexeChart"></canvas>
+					</div>
+				</div>
+				<div class="chart-corb">
+					<div class="chart">
+						<p class="text-center mb-3">
+							Nombre Fonctionnaires par Tranche d'Age
+						</p>
+						<canvas class="barChart" data-colors='rgb(15,45,255)' data-values='["30","43","9","30","5"]' data-labels='["18-25","25-35","35-45","45-55","55-65"]'></canvas>
+					</div>
+					<div class="chart d-flex justify-content-between bg-transparent  p-0">
+						<div class="w-49 bg-white p-3">
+							<p class="text-center mb-3">
+								Nombre Fonctionnaires par Sexe
+							</p>
+							<canvas class="barChart" data-colors='["rgb(15, 45, 255)","rgb(168, 37, 255)"]' data-values='["56","48"]' data-labels='["Homme","Femme"]'></canvas>
+						</div>
+						<div class="w-49 bg-white p-3">
+							<p class="text-center mb-3">
+								Nombre Fonctionnaires par Division
+							</p>
+							<div class="chart-doughnut">
+								<div class="slider-chart">
+									<div class="chart-pachalik">
+										<p class="text-center mb-4">Division name</p>
+										<canvas class="Chart-doughnut" data-label="Division" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(118, 34, 171)","rgb(22, 112, 179)"]' data-values='["30","30","50","80"]' data-labels='["Division","Division","Division"]'></canvas>
+									</div>
+									<div class="chart-pachalik">
+										<p class="text-center mb-4">Division name</p>
+										<canvas class="Chart-doughnut" data-label="Division" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(118, 34, 171)","rgb(22, 112, 179)"]' data-values='["30","30","50","80"]' data-labels='["Division","Division","Division"]'></canvas>
+									</div>
+									<div class="chart-pachalik">
+										<p class="text-center mb-4">Division name</p>
+										<canvas class="Chart-doughnut" data-label="Division" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(118, 34, 171)","rgb(22, 112, 179)"]' data-values='["30","30","50","80"]' data-labels='["Division","Division","Division"]'></canvas>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="items-taps" data-show="s-fonctionnaire">
+				<div class="d-flex justify-content-between flex-wrap mb-3">
+					<h1 class="mb-0">FONCTIONNAIRES</h1>
+					<div class='btns-links'>
+						<a href="ajouter-fonctionnaire.html" class="btn btn-small btn-blue">Ajouter un Fonctionnaire</a>
+					</div>
+				</div>
+				<div class="chart-corb">
+					<div class="chart">
+						<p class="text-center mb-3">Nombre des fonctionnaires ayant exercer à cette province de puis sa création</p>
+						<canvas id="countChart"></canvas>
+					</div>
+					<div class="chart">
+						<p class="text-center mb-3">Statistiques des Fonctionnaires par sexe ayant exercer à cette province de puis sa création.</p>
+						<canvas id="sexeChart"></canvas>
+					</div>
+				</div>
+				<div class="chart-doughnut p-4">
+					<p class="text-center mb-4">Nombre de fonctionnaires par tranche d'âge et par sexe dans chaque division.</p>
+					<div class="slider-chart" data-show="3">
+						<div class="chart-division">
+							<p class="text-center mb-4">Division</p>
+							<div class="chartow">
+								<canvas class="Chart-doughnut" data-label="Age" data-colors='["rgb(0, 166, 118)", "rgb(68, 197, 201)","rgb(88, 117, 190)","rgb(255, 178, 56)","rgb(214, 29, 29)"]' data-values='["300","50","100","50","100"]' data-labels='["18-25","25-35","35-45","45-55","55-65"]'></canvas>
+								<canvas class="Chart-doughnut" data-label="Sexe" data-colors='["rgb(118, 34, 171)","rgb(15, 45, 255)"]' data-values='["300","50"]' data-labels='["Femme","Homme"]'></canvas>
+							</div>
+						</div>
+						<div class="chart-division">
+							<p class="text-center mb-4">Division</p>
+							<div class="chartow">
+								<canvas class="Chart-doughnut" data-label="Age" data-colors='["rgb(0, 166, 118)", "rgb(68, 197, 201)","rgb(88, 117, 190)","rgb(255, 178, 56)","rgb(214, 29, 29)"]' data-values='["300","50","100","50","100"]' data-labels='["18-25","25-35","35-45","45-55","55-65"]'></canvas>
+								<canvas class="Chart-doughnut" data-label="Sexe" data-colors='["rgb(118, 34, 171)","rgb(15, 45, 255)"]' data-values='["300","50"]' data-labels='["Femme","Homme"]'></canvas>
+							</div>
+						</div>
+						<div class="chart-division">
+							<p class="text-center mb-4">Division</p>
+							<div class="chartow">
+								<canvas class="Chart-doughnut" data-label="Age" data-colors='["rgb(0, 166, 118)", "rgb(68, 197, 201)","rgb(88, 117, 190)","rgb(255, 178, 56)","rgb(214, 29, 29)"]' data-values='["300","50","100","50","100"]' data-labels='["18-25","25-35","35-45","45-55","55-65"]'></canvas>
+								<canvas class="Chart-doughnut" data-label="Sexe" data-colors='["rgb(118, 34, 171)","rgb(15, 45, 255)"]' data-values='["300","50"]' data-labels='["Femme","Homme"]'></canvas>
+							</div>
+						</div>
+						<div class="chart-division">
+							<p class="text-center mb-4">Division</p>
+							<div class="chartow">
+								<canvas class="Chart-doughnut" data-label="Age" data-colors='["rgb(0, 166, 118)", "rgb(68, 197, 201)","rgb(88, 117, 190)","rgb(255, 178, 56)","rgb(214, 29, 29)"]' data-values='["300","50","100","50","100"]' data-labels='["18-25","25-35","35-45","45-55","55-65"]'></canvas>
+								<canvas class="Chart-doughnut" data-label="Sexe" data-colors='["rgb(118, 34, 171)","rgb(15, 45, 255)"]' data-values='["300","50"]' data-labels='["Femme","Homme"]'></canvas>
+							</div>
+						</div>
+						<div class="chart-division">
+							<p class="text-center mb-4">Division</p>
+							<div class="chartow">
+								<canvas class="Chart-doughnut" data-label="Age" data-colors='["rgb(0, 166, 118)", "rgb(68, 197, 201)","rgb(88, 117, 190)","rgb(255, 178, 56)","rgb(214, 29, 29)"]' data-values='["300","50","500","50","100"]' data-labels='["18-25","25-35","35-45","45-55","55-65"]'></canvas>
+								<canvas class="Chart-doughnut" data-label="Sexe" data-colors='["rgb(118, 34, 171)","rgb(15, 45, 255)"]' data-values='["30","50"]' data-labels='["Femme","Homme"]'></canvas>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrap-infos border-0 mt-4">
+					<div class="box-info">
+						<a href="#" download>Liste des fonctionnaires titulaire.</a>
+						<a href="#" download>Liste des fonctionnaires stagiaire.</a>
+						<a href="#" download>Liste des fonctionnaires retraités.</a>
+					</div>
+					<div class="box-info">
+						<a href="#" download>Liste des fonctionnaires mis a la retraite.</a>
+						<a href="#" download>Liste des Fonctionnaires mis a disposition.</a>
+						<a href="#" download>Liste des candidats à passer l'examen d'aptitude professionnelle pour cette année</a>
+					</div>
+					<div class="box-info">
+						<a href="#" download>Liste des avancements aux grades des fonctionnaires pour cette année</a>
+						<a href="#" download>Liste des avancements aux échelles des fonctionnaires pour cette année</a>
+						<a href="#" download>Liste des avancements aux échelons des fonctionnaires pour cette année</a>
+					</div>
+				</div>
+			</div>
+			<div class="items-taps" data-show="s-Services">
+				<h1>DIVISIONS & SERVICES</h1>
+				<div class="d-flex mb-3">
+					<div class="chart-doughnut w-75 p-3 mt-0">
+						<div class="slider-chart" data-show="4">
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Division</p>
+								<canvas class="Chart-doughnut" data-label="Service" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Service","Service","Service"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Division</p>
+								<canvas class="Chart-doughnut" data-label="Service" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Service","Service","Service"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Division</p>
+								<canvas class="Chart-doughnut" data-label="Service" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Service","Service","Service"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Division</p>
+								<canvas class="Chart-doughnut" data-label="Service" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Service","Service","Service"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Division</p>
+								<canvas class="Chart-doughnut" data-label="Service" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Service","Service","Service"]'></canvas>
+							</div>
+						</div>
+					</div>
+					<from action="/" method="post" class="p-4 ms-3 bg-white">
+						<div class="mb-3">
+							<label>Nom</label>
+							<input type="text" autocomplete="false"/>
+						</div>
+						<div class="mb-3">
+							<label>Abréviation</label>
+							<input type="text" autocomplete="false"/>
+						</div>
+						<div class="mb-3">
+							<label>Catégories</label>
+							<select>
+								<option>Service</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label>Liste des divisions</label>
+							<select>
+								<option>Division</option>
+							</select>
+						</div>
+						<div>
+							<button class="btn btn-small btn-border-blue">Vider</button>
+							<button class="btn btn-small btn-blue">Ajouter</button>
+						</div>
+					</form>
+				</div>
+				<div class="s-situation-f">
+					<div class="s-table">
+						<table class="table text-center">
+							<thead>
+								<tr>
+									<th scope="col">
+										Nom de division
+									</th>
+									<th scope="col">
+										Abréviation
+									</th>
+									<th scope="col">
+										Actions
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Nom de division</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#" class="droplink">Liste des services</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<table class="table text-center">
+											<thead>
+												<tr>
+													<th scope="col">
+														Nom de Service
+													</th>
+													<th scope="col">
+														Abréviation
+													</th>
+													<th scope="col">
+														Actions
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Nom de Service</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer de la division</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom de Service</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer de la division</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom de Service</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer de la division</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom de Service</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer de la division</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de division</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#" class="droplink">Liste des services</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de division</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#" class="droplink">Liste des services</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de division</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#" class="droplink">Liste des services</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de division</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#" class="droplink">Liste des services</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="items-taps" data-show="s-annexes">
+				<h1>PACHALIKS & ANNEXES</h1>
+				<div class="d-flex mb-3">
+					<div class="chart-doughnut w-75 p-3 mt-0">
+						<div class="slider-chart" data-show="4">
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Pachaliks</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Annexe","Annexe","Annexe"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Pachaliks</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Annexe","Annexe","Annexe"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Pachaliks</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Annexe","Annexe","Annexe"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Pachaliks</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Annexe","Annexe","Annexe"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Pachaliks</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Annexe","Annexe","Annexe"]'></canvas>
+							</div>
+						</div>
+					</div>
+					<from action="/" method="post" class="p-4 ms-3 bg-white">
+						<div class="mb-3">
+							<label>Nom</label>
+							<input type="text" autocomplete="false"/>
+						</div>
+						<div class="mb-3">
+							<label>Abréviation</label>
+							<input type="text" autocomplete="false"/>
+						</div>
+						<div class="mb-3">
+							<label>Catégories</label>
+							<select>
+								<option>Annexe</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label>Liste des Pachaliks</label>
+							<select>
+								<option>Pachalik</option>
+							</select>
+						</div>
+						<div>
+							<button class="btn btn-small btn-border-blue">Vider</button>
+							<button class="btn btn-small btn-blue">Ajouter</button>
+						</div>
+					</form>
+				</div>
+				<div class="s-situation-f">
+					<div class="s-table">
+						<table class="table text-center">
+							<thead>
+								<tr>
+									<th scope="col">
+										Nom de Pachalik
+									</th>
+									<th scope="col">
+										Abréviation
+									</th>
+									<th scope="col">
+										Actions
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Nom de Pachalik</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#" class="droplink">Liste des annexes</a>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<table class="table text-center">
+											<thead>
+												<tr>
+													<th scope="col">
+														Nom de Pachalik
+													</th>
+													<th scope="col">
+														Abréviation
+													</th>
+													<th scope="col">
+														Actions
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Nom de Pachalik</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du pachalik</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom de Pachalik</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du pachalik</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom de Pachalik</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du pachalik</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom de Pachalik</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du pachalik</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom de Pachalik</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du pachalik</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de Pachalik</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de Pachalik</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de Pachalik</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom de Pachalik</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="items-taps" data-show="s-caidats">
+				<h1>PACHALIKS & ANNEXES</h1>
+				<div class="d-flex mb-3">
+					<div class="chart-doughnut w-75 p-3 mt-0">
+						<div class="slider-chart" data-show="4">
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Cercle</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Caïdat","Caïdat","Caïdat"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Cercle</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Caïdat","Caïdat","Caïdat"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Cercle</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Caïdat","Caïdat","Caïdat"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Cercle</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Caïdat","Caïdat","Caïdat"]'></canvas>
+							</div>
+							<div class="chart-pachalik">
+								<p class="text-center mb-4">Cercle</p>
+								<canvas class="Chart-doughnut" data-label="Annexe" data-colors='["rgb(15, 45, 255)","rgb(52, 51, 153)","rgb(168, 37, 255)"]' data-values='["30","30","50"]' data-labels='["Caïdat","Caïdat","Caïdat"]'></canvas>
+							</div>
+						</div>
+					</div>
+					<from action="/" method="post" class="p-4 ms-3 bg-white">
+						<div class="mb-3">
+							<label>Nom</label>
+							<input type="text" autocomplete="false"/>
+						</div>
+						<div class="mb-3">
+							<label>Abréviation</label>
+							<input type="text" autocomplete="false"/>
+						</div>
+						<div class="mb-3">
+							<label>Catégories</label>
+							<select>
+								<option>Cercle</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label>Liste des Caïdats</label>
+							<select>
+								<option>Caïdat</option>
+							</select>
+						</div>
+						<div>
+							<button class="btn btn-small btn-border-blue">Vider</button>
+							<button class="btn btn-small btn-blue">Ajouter</button>
+						</div>
+					</form>
+				</div>
+				<div class="s-situation-f">
+					<div class="s-table">
+						<table class="table text-center">
+							<thead>
+								<tr>
+									<th scope="col">
+										Nom du Cercle
+									</th>
+									<th scope="col">
+										Abréviation
+									</th>
+									<th scope="col">
+										Actions
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Nom du Cercle</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#" class="droplink">Liste des caïdats</td>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="3">
+										<table class="table text-center">
+											<thead>
+												<tr>
+													<th scope="col">
+														Nom du Caïdat
+													</th>
+													<th scope="col">
+														Abréviation
+													</th>
+													<th scope="col">
+														Actions
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Nom du Caïdat</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du cercle</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom du Caïdat</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du cercle</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom du Caïdat</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du cercle</a>
+													</td>
+												</tr>
+												<tr>
+													<td>Nom du Caïdat</td>
+													<td>Abr</td>
+													<td class="action-download">
+														<a href="#">Modifier</a>
+														<a href="#">Supprimer</a>
+														<a href="#">Se retirer du cercle</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom du Cercle</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom du Cercle</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom du Cercle</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+								<tr>
+									<td>Nom du Cercle</td>
+									<td>Abr</td>
+									<td class="action-download">
+										<a href="#">Modifier</a>
+										<a href="#">Supprimer</a>
+										<a href="#">Liste des annexes</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="items-taps" data-show="s-imprimes">
+				<h1>LES IMPRIMÉS</h1>
+				<div class="s-situation-f">
+					<div class="d-flex justify-content-between flex-wrap mb-3">
+						<div>
+							<a href="#" download class="btn btn-small btn-border-blue mb-3">Importez le fichier</a>
+							<div class="d-flex flex-wrap mt-3">
+								<a href="#" class="btn btn-small btn-red me-3 mb-2">Supprimer les fichiers sélectionnés</a>
+								<a href="#" download class="btn btn-small btn-blue mb-2">Télécharger les fichiers sélectionnés</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-table">
+						<table class="table text-center">
+							<thead>
+								<tr>
+									<th scope="col">
+										<input type="checkbox">
+									</th>
+									<th scope="col">
+										Nom de fichier
+									</th>
+									<th scope="col">
+										Date de l'importation
+									</th>
+									<th scope="col">
+										Type de fichier
+									</th>
+									<th scope="col">
+										Actions
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="checkbox">
+									</td>
+									<td>Attestation de travaille FR</td>
+									<td>00/ 00/ 0000</td>
+									<td>doc</td>
+									<td class="action-download">
+										<a href="#" download>Télecharger</a>
+										<a href="#">Supprimer</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
