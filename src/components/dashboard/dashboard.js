@@ -128,3 +128,38 @@ $(document).ready(function ($) {
 
 
 
+
+if ($(".barChart")) {
+  function Chart_bar(item, colors, values, labels) {
+    var barChart = new Chart(item, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          barPercentage: 30,
+          barThickness: 30,
+          backgroundColor: colors,
+          data: values,
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+      }
+    });
+  }
+  $(document).ready(function ($) {
+    $(".barChart").each(function () {
+      var colors = $(this).data('colors');
+      var values = $(this).data('values');
+      var labels = $(this).data('labels');
+      Chart_bar($(this), colors, values, labels);
+    });
+  });
+}
+
