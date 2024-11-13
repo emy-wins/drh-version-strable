@@ -20,7 +20,7 @@ $(document).ready(function ($) {
       $('.form-modifier').addClass('show-form');
       $(".loader").delay(1000).fadeOut("slow");
     });
-    $('.btn-modifier').click(function () {
+    $('.btn-reinitialiser').click(function () {
       $(".loader").show();
       $('.form-login').each(function () {
         $(this).removeClass('show-form');
