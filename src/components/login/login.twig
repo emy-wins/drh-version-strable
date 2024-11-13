@@ -8,18 +8,18 @@
 			</div>
 			<div class="col-lg-6 col-xl-5 p-1">
 				<div class="wrap-login" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="900">
-					<form action="accueil.html" method="get" class="form-login lg-form show-form">
+					<form action="accueil.html" method="get" id="form-login" class="form-login lg-form show-form">
 						<div class="img-login">
 							<img src="../assets/images/svg/logo-kigdom.svg" alt=""/>
 						</div>
 						<h1>Bienvenu à votre plateforme</h1>
-						<div class="mb-4">
+						<div class="mb-3">
 							<span class="label-inpt">Entrez votre CNIE</span>
-							<input type="text" placeholder="Ex : XX00000"/>
+							<input type="text" placeholder="Ex : XX00000" name="cnie"/>
 						</div>
-						<div class="mb-4">
+						<div class="mb-3">
 							<span class="label-inpt">Entrez votre mot de passe</span>
-							<input type="password" placeholder="Mot de passe"/>
+							<input type="password" placeholder="Mot de passe" name="password"/>
 						</div>
 						<div class="btns-form">
 							<button class="btn-big btn-blue">Se connecter</button>
@@ -30,21 +30,25 @@
 							<p>Merci de ne pas divulguer vos coordonnées personnelles.</p>
 						</div>
 					</form>
-					<form action="#" method="get" class="form-login form-verifier">
+					<form action="#" method="get" id="form-verifier" class="form-login form-verifier">
 						<div class="img-login">
 							<img src="../assets/images/svg/logo-kigdom.svg" alt=""/>
 						</div>
-						<div class="mb-4">
-							<input type="text" placeholder="CNIE"/>
+						<div class="mb-3">
+							<span class="label-inpt">Entrez votre CNIE</span>
+							<input type="text" placeholder="CNIE" name="cnie"/>
 						</div>
-						<div class="mb-4">
-							<input type="email" placeholder="Email"/>
+						<div class="mb-3">
+							<span class="label-inpt">Entrez votre Email</span>
+							<input type="email" placeholder="Email" name="email"/>
 						</div>
-						<div class="mb-4">
-							<input type="date" placeholder="Date naissance"/>
+						<div class="mb-3">
+							<span class="label-inpt">Entrez votre date de naissance</span>
+							<input type="text" placeholder="Exemple : 01/01/1973" name="date"/>
 						</div>
 						<div class="btns-form">
-							<a href="javascript:void(0);" class="btn w-100 btn-big btn-blue btn-verifier">verifier</a>
+							<a href="javascript:void(0);" class="btn w-100 btn-big btn-blue btn-verifier">verifier le compte
+							</a>
 						</div>
 					</form>
 					<form action="#" method="get" class="form-login form-modifier">
@@ -53,11 +57,11 @@
 						</div>
 						<div class="mb-3">
 							<p class="text-center">
-								Mettre CNIE comme le mot de passe
+								Mettre CNIE comme mot de passe
 							</p>
 						</div>
 						<div class="btns-form">
-							<button class="btn-big btn-blue w-100 btn-reinitialiser">Réinitialiser le mot de passe</button>
+							<button class="btn-big btn-blue w-100 btn-reinitialiser">Réinitialiser mot de passe</button>
 						</div>
 					</form>
 				</div>
