@@ -1,6 +1,9 @@
 $(document).ready(function ($) {
+
   $(".loader").delay(2000).fadeOut("slow");
-  if ($(".menu").length) {
+  $("body").delay(2000).css("overflow", "unset");
+
+  if ($(".menu").length){
     $(".menu li").each(function () {
       $(this).click(function () {
         $(".loader").show();
@@ -18,7 +21,8 @@ $(document).ready(function ($) {
       });
     });
   }
-  if ($(".menu").length) {
+
+  if ($(".slider-eq").length){
     $(".slider-eq").slick({
       slidesToShow: 3,
       infinite: true,
