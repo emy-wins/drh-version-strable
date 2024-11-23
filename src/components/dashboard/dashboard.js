@@ -40,6 +40,48 @@ if (ctx) {
   });
 }
 
+var ctx2 = document.getElementById("countChart2");
+if (ctx2) {
+  var myChart2 = new Chart(ctx2, {
+    type: "line",
+    data: {
+      labels: ["1991", "1994", "1997", "2000", "2003", "2006", "2009", "2012", "2015", "2018", "2021", "2024"],
+      datasets: [
+        {
+          data: [100, 150, 180, 230, 200, 250, 270, 230, 300, 340, 330, 500, 550],
+          borderColor: "rgb(15, 45, 255)",
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      elements: {
+        point: {
+          radius: 0
+        }
+      },
+      scales: {
+        y: {
+          type: 'linear',
+          ticks: {
+            beginAtZero: false,
+            stepSize: 50, // Customize the step size if needed
+            min: 50,
+            max: 550,
+            suggestedMax: Math.max(550), // Set the maximum value of the y-axis to 100
+          },
+        }
+      }
+    }
+  });
+}
+
 //chart two multiple line
 
 var ctxtwo = document.getElementById("sexeChart");
@@ -78,15 +120,64 @@ if (ctxtwo) {
   });
 }
 
+//2
+
+var ctxtwo2 = document.getElementById("sexeChart2");
+if (ctxtwo) {
+  var myChart2 = new Chart(ctxtwo2, {
+    type: 'line',
+    backgroundColor: 'rgb(15, 45, 255)',
+    data: {
+      labels: ["1991", "1994", "1997", "2000", "2003", "2006", "2009", "2012", "2015", "2018", "2021", "2024"],
+      datasets: [{
+        label: 'Homme', // Name the series
+        data: [100, 150, 180, 230, 200, 150, 280, 230, 300, 340, 130, 300, 450], // Specify the data values array
+        fill: true,
+        borderColor: "rgb(15, 45, 255)",
+        backgroundColor: 'rgb(15, 45, 255,0.26)', // Add custom color background (Points and Fill)
+        borderWidth: 1// Specify bar border width
+      },
+      {
+        label: 'Femme', // Name the series
+        data: [100, 50, 180, 130, 100, 250, 170, 130, 100, 140, 130, 100, 150], // Specify the data values array
+        fill: true,
+        borderColor: 'rgb(168, 37, 255)', // Add custom color border (Line)
+        backgroundColor: 'rgb(168, 37, 255,0.26)', // Add custom color background (Points and Fill)
+        borderWidth: 1 // Specify bar border width
+      }]
+    },
+    options: {
+      responsive: true, // Instruct chart js to respond nicely.
+      maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+      elements: {
+        point: {
+          radius: 0
+        }
+      }
+    }
+  });
+}
+
+
 //chart division
 if ($(".slider-chart")) {
-  var $show = $(".slider-chart").data('show');
   $(".slider-chart").slick({
     focusOnSelect: true,
     dots: false,
     infinite: true,
     autoSlidesToShow: true,
     variableWidth: true,
+  });
+}
+if ($(".slider-chart2")) {
+  $(".slider-chart2").slick({
+    slidesToShow: 1,
+    infinite: true,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: false,
+    arrows: false,
   });
 }
 
@@ -125,8 +216,6 @@ $(document).ready(function ($) {
     Chart_doughnut($(this), colors, label, values, labels);
   });
 });
-
-
 
 
 if ($(".barChart")) {
