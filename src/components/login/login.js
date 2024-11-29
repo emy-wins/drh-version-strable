@@ -1,8 +1,3 @@
-AOS.init({
-  once: true,
-  mirror: false,
-});
-
 $(document).ready(function ($) {
   $("#form-login").validate({
     rules: {
@@ -17,8 +12,8 @@ $(document).ready(function ($) {
       cnie: "CNIE est obligatoire",
       password: {
         required: "Mot de passe est obligatoire",
-        minlength:"Le mot de passe doit contenir au minimum 6 caractères.",
-        maxlength:"Le mot de passe ne doit pas dépasser 10 caractères"
+        minlength: "Le mot de passe doit contenir au minimum 6 caractères.",
+        maxlength: "Le mot de passe ne doit pas dépasser 10 caractères"
       },
     },
     errorPlacement: function (error, element) {
