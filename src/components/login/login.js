@@ -1,8 +1,3 @@
-AOS.init({
-  once: true,
-  mirror: false,
-});
-
 $(document).ready(function ($) {
   $("#form-login").validate({
     rules: {
