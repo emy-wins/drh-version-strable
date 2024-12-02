@@ -297,11 +297,6 @@ function updateProgressbar() {
 
 
 $(document).ready(function () {
-  $(".add-partner").click(function () {
-    $(".form-partner").append("");
-    $(".add-enfant").click(function () {
-      $(".wrap-enfant").append("")
-    });
-  });
+
 });
 
